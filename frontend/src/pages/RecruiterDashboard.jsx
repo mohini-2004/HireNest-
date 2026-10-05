@@ -16,10 +16,10 @@ function RecruiterDashboard() {
 
         const [jobsResponse, candidatesResponse] = await Promise.all([
           fetch(
-            `http://localhost:5000/api/jobs/recruiter/${user.id}`
+            `https://hirenest-backend-ihvo.onrender.com/api/jobs/recruiter/${user.id}`
           ),
           fetch(
-            `http://localhost:5000/api/candidates/recruiter/${user.id}`
+            `https://hirenest-backend-ihvo.onrender.com/api/candidates/recruiter/${user.id}`
           ),
         ]);
 

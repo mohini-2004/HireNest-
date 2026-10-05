@@ -12,7 +12,7 @@ function CandidateApplications() {
     const fetchApplications = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/applications/candidate/${user?.id}`
+          `https://hirenest-backend-ihvo.onrender.com/api/applications/candidate/${user?.id}`
         );
 
         const data = await response.json();

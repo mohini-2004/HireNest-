@@ -26,7 +26,7 @@ function CandidateDetails() {
         setError("");
 
         const response = await fetch(
-          `http://localhost:5000/api/candidates/${id}`
+          `https://hirenest-backend-ihvo.onrender.com/api/candidates/${id}`
         );
 
         const data = await response.json();
@@ -63,7 +63,7 @@ function CandidateDetails() {
       setError("");
 
       const response = await fetch(
-        `http://localhost:5000/api/candidates/${candidate._id}/status`,
+        `https://hirenest-backend-ihvo.onrender.com/api/candidates/${candidate._id}/status`,
         {
           method: "PATCH",
           headers: {
@@ -101,7 +101,7 @@ function CandidateDetails() {
       setError("");
 
       const response = await fetch(
-        `http://localhost:5000/api/candidates/${candidate._id}/ai-screen`,
+        `https://hirenest-backend-ihvo.onrender.com/api/candidates/${candidate._id}/ai-screen`,
         {
           method: "POST",
           headers: {

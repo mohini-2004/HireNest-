@@ -15,7 +15,7 @@ function CandidateDashboard() {
         setLoading(true);
 
         const jobsResponse = await fetch(
-          "http://localhost:5000/api/jobs"
+          "https://hirenest-backend-ihvo.onrender.com/api/jobs"
         );
 
         if (jobsResponse.ok) {
@@ -25,7 +25,7 @@ function CandidateDashboard() {
 
         if (user?.id) {
           const applicationsResponse = await fetch(
-            `http://localhost:5000/api/applications/candidate/${user.id}`
+            `https://hirenest-backend-ihvo.onrender.com/api/applications/candidate/${user.id}`
           );
 
           if (applicationsResponse.ok) {

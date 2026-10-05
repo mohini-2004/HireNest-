@@ -35,7 +35,7 @@ function CreateJob() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:5000/api/jobs", {
+      const response = await fetch("https://hirenest-backend-ihvo.onrender.com/api/jobs", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

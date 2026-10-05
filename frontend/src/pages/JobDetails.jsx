@@ -19,7 +19,7 @@ function JobDetails() {
     const fetchJob = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/jobs/${id}`
+          `https://hirenest-backend-ihvo.onrender.com/api/jobs/${id}`
         );
 
         const data = await response.json();
@@ -50,7 +50,7 @@ function JobDetails() {
 
       try {
         const response = await fetch(
-          `http://localhost:5000/api/applications/candidate/${user.id}`
+          `https://hirenest-backend-ihvo.onrender.com/api/applications/candidate/${user.id}`
         );
 
         const data = await response.json();
@@ -101,7 +101,7 @@ function JobDetails() {
       setApplicationMessage("");
 
       const response = await fetch(
-        "http://localhost:5000/api/applications",
+        "https://hirenest-backend-ihvo.onrender.com/api/applications",
         {
           method: "POST",
           headers: {

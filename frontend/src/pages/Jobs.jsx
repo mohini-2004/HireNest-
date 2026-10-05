@@ -12,7 +12,7 @@ function Jobs() {
     const fetchJobs = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/jobs/recruiter/${user.id}`
+          `https://hirenest-backend-ihvo.onrender.com/api/jobs/recruiter/${user.id}`
         );
 
         const data = await response.json();
