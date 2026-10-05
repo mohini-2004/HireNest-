@@ -10,15 +10,15 @@ The platform brings **job management, candidate screening, application tracking,
 
 ---
 
-## 🌐 Live Demo
+## Live Demo
 
-### 🔗 Frontend
-https://hire-nest-g6fdqh2u6-mohinigupta-cs23-5986s-projects.vercel.app
+**Frontend:**  
+https://hire-nest-ivory.vercel.app
 
-### ⚙️ Backend API
+**Backend:**  
 https://hirenest-backend-ihvo.onrender.com
 
-### 💻 Source Code
+**GitHub:**  
 https://github.com/mohini-2004/HireNest-
 
 ---
