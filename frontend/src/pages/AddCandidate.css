@@ -1,0 +1,369 @@
+.add-candidate-page {
+  min-height: 100vh;
+  display: flex;
+  background: #f7f8fc;
+  color: #172033;
+}
+
+/* ==================== SIDEBAR ==================== */
+
+.add-candidate-sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #e8eaf0;
+  padding: 24px 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-candidate-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+  margin-bottom: 42px;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.brand-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #635bff;
+  color: white;
+  font-weight: 700;
+}
+
+.add-candidate-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  color: #667085;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.nav-item span {
+  width: 20px;
+  text-align: center;
+}
+
+.nav-item:hover {
+  background: #f3f4ff;
+  color: #635bff;
+}
+
+.nav-item.active {
+  background: #eeedff;
+  color: #635bff;
+  font-weight: 600;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.logout-btn {
+  border: none;
+  background: transparent;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  color: #667085;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.logout-btn:hover {
+  background: #fff1f1;
+  color: #e5484d;
+}
+
+/* ==================== MAIN ==================== */
+
+.add-candidate-main {
+  flex: 1;
+  padding: 34px 42px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 22px;
+  color: #667085;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  color: #635bff;
+}
+
+.add-candidate-heading {
+  margin-bottom: 28px;
+}
+
+.add-candidate-heading h1 {
+  margin: 0 0 7px;
+  font-size: 30px;
+  letter-spacing: -0.5px;
+}
+
+.add-candidate-heading p {
+  margin: 0;
+  color: #667085;
+  font-size: 14px;
+}
+
+/* ==================== FORM CARD ==================== */
+
+.candidate-form-card {
+  max-width: 900px;
+  background: #ffffff;
+  border: 1px solid #e9ebf0;
+  border-radius: 16px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.form-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #edf0f4;
+  margin-bottom: 28px;
+}
+
+.form-header-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: #eeedff;
+  color: #635bff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+}
+
+.form-card-header h2 {
+  margin: 0 0 5px;
+  font-size: 18px;
+}
+
+.form-card-header p {
+  margin: 0;
+  color: #667085;
+  font-size: 13px;
+}
+
+/* ==================== ERROR ==================== */
+
+.form-error {
+  background: #fff1f1;
+  border: 1px solid #ffd5d5;
+  color: #d64545;
+  padding: 11px 13px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 22px;
+}
+
+/* ==================== FORM SECTIONS ==================== */
+
+.form-section {
+  margin-bottom: 32px;
+}
+
+.form-section h3 {
+  margin: 0 0 18px;
+  font-size: 15px;
+  color: #344054;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  color: #344054;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.form-group label span {
+  color: #e5484d;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 13px;
+  border: 1px solid #d9dde5;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #172033;
+  font-family: inherit;
+  font-size: 13px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.form-group input::placeholder {
+  color: #98a2b3;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #635bff;
+  box-shadow: 0 0 0 3px rgba(99, 91, 255, 0.08);
+}
+
+.form-group select:disabled {
+  background: #f5f6f8;
+  cursor: not-allowed;
+}
+
+.field-note {
+  margin-top: 6px;
+  color: #98a2b3;
+  font-size: 11px;
+}
+
+/* ==================== ACTIONS ==================== */
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  padding-top: 22px;
+  border-top: 1px solid #edf0f4;
+}
+
+.cancel-btn {
+  padding: 11px 18px;
+  border: 1px solid #d9dde5;
+  border-radius: 9px;
+  color: #475467;
+  background: white;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.cancel-btn:hover {
+  background: #f8f9fb;
+}
+
+.save-candidate-btn {
+  border: none;
+  padding: 12px 19px;
+  border-radius: 9px;
+  background: #635bff;
+  color: white;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.save-candidate-btn:hover {
+  background: #5148e5;
+  transform: translateY(-1px);
+}
+
+.save-candidate-btn:disabled {
+  background: #a8a5e8;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 800px) {
+  .add-candidate-sidebar {
+    width: 210px;
+  }
+
+  .add-candidate-main {
+    padding: 25px;
+  }
+
+  .candidate-form-card {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .add-candidate-sidebar {
+    display: none;
+  }
+
+  .add-candidate-main {
+    padding: 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full-width {
+    grid-column: auto;
+  }
+
+  .candidate-form-card {
+    padding: 20px;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .cancel-btn,
+  .save-candidate-btn {
+    text-align: center;
+  }
+}

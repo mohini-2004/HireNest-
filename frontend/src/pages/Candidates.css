@@ -1,0 +1,422 @@
+.candidates-page {
+  min-height: 100vh;
+  display: flex;
+  background: #f7f8fc;
+  color: #172033;
+}
+
+/* ==================== SIDEBAR ==================== */
+
+.candidates-sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #e8eaf0;
+  padding: 24px 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.candidates-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+  margin-bottom: 42px;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.brand-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #635bff;
+  color: white;
+  font-weight: 700;
+}
+
+.candidates-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  color: #667085;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.nav-item span {
+  width: 20px;
+  text-align: center;
+}
+
+.nav-item:hover {
+  background: #f3f4ff;
+  color: #635bff;
+}
+
+.nav-item.active {
+  background: #eeedff;
+  color: #635bff;
+  font-weight: 600;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.logout-btn {
+  border: none;
+  background: transparent;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  color: #667085;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.logout-btn:hover {
+  background: #fff1f1;
+  color: #e5484d;
+}
+
+/* ==================== MAIN ==================== */
+
+.candidates-main {
+  flex: 1;
+  padding: 34px 42px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.candidates-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.candidates-header h1 {
+  margin: 0 0 7px;
+  font-size: 30px;
+  letter-spacing: -0.5px;
+}
+
+.candidates-header p {
+  margin: 0;
+  color: #667085;
+  font-size: 14px;
+}
+
+.add-candidate-btn {
+  background: #635bff;
+  color: white;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.add-candidate-btn:hover {
+  background: #5148e5;
+  transform: translateY(-1px);
+}
+
+/* ==================== STATS ==================== */
+
+.candidate-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.candidate-stat-card {
+  background: white;
+  border: 1px solid #e9ebf0;
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.stat-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 11px;
+  background: #f1f0ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.candidate-stat-card span {
+  display: block;
+  color: #667085;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.candidate-stat-card strong {
+  font-size: 23px;
+  color: #172033;
+}
+
+/* ==================== CANDIDATES SECTION ==================== */
+
+.candidates-section {
+  background: white;
+  border: 1px solid #e9ebf0;
+  border-radius: 16px;
+  padding: 26px;
+}
+
+.section-header {
+  margin-bottom: 22px;
+}
+
+.section-header h2 {
+  margin: 0 0 6px;
+  font-size: 19px;
+}
+
+.section-header p {
+  margin: 0;
+  color: #667085;
+  font-size: 13px;
+}
+
+/* ==================== EMPTY STATE ==================== */
+
+.candidate-empty-state {
+  text-align: center;
+  padding: 65px 20px;
+}
+
+.empty-icon {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.candidate-empty-state h3 {
+  margin: 0 0 7px;
+  font-size: 18px;
+}
+
+.candidate-empty-state p {
+  margin: 0 0 20px;
+  color: #667085;
+  font-size: 14px;
+}
+
+.empty-add-btn {
+  display: inline-block;
+  background: #635bff;
+  color: white;
+  text-decoration: none;
+  padding: 11px 17px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ==================== CANDIDATE LIST ==================== */
+
+.candidates-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.candidate-row {
+  display: grid;
+  grid-template-columns: 48px 1.5fr 1.3fr 1fr 120px 70px;
+  align-items: center;
+  gap: 15px;
+  padding: 16px;
+  border: 1px solid #edf0f4;
+  border-radius: 12px;
+  transition: 0.2s ease;
+}
+
+.candidate-row:hover {
+  border-color: #d9d7ff;
+  box-shadow: 0 4px 14px rgba(31, 35, 60, 0.05);
+}
+
+.candidate-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #eeedff;
+  color: #635bff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.candidate-info h3 {
+  margin: 0 0 5px;
+  font-size: 14px;
+}
+
+.candidate-info p {
+  margin: 0;
+  color: #667085;
+  font-size: 12px;
+}
+
+.candidate-job span,
+.candidate-experience span {
+  display: block;
+  color: #98a2b3;
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+
+.candidate-job strong,
+.candidate-experience strong {
+  display: block;
+  color: #344054;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  background: #f2f4f7;
+  color: #667085;
+}
+
+.status-ai-screened {
+  background: #eef4ff;
+  color: #3b6fd8;
+}
+
+.status-shortlisted {
+  background: #ecfdf3;
+  color: #16855b;
+}
+
+.status-interview {
+  background: #fff7e8;
+  color: #b7791f;
+}
+
+.status-selected {
+  background: #e9fbf3;
+  color: #087443;
+}
+
+.status-rejected {
+  background: #fff1f1;
+  color: #d64545;
+}
+
+.view-candidate-btn {
+  color: #635bff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.view-candidate-btn:hover {
+  color: #4038c8;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 1100px) {
+  .candidate-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .candidate-row {
+    grid-template-columns: 48px 1.5fr 1fr 100px 60px;
+  }
+
+  .candidate-experience {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .candidates-sidebar {
+    width: 210px;
+  }
+
+  .candidates-main {
+    padding: 25px;
+  }
+
+  .candidates-header {
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .candidate-row {
+    grid-template-columns: 48px 1fr auto;
+  }
+
+  .candidate-job,
+  .candidate-status {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .candidates-sidebar {
+    display: none;
+  }
+
+  .candidates-main {
+    padding: 20px;
+  }
+
+  .candidates-header {
+    flex-direction: column;
+  }
+
+  .candidate-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .candidates-section {
+    padding: 18px;
+  }
+}
