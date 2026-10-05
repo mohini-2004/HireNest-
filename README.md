@@ -125,3 +125,274 @@ Skills     Skills
    └───┬────┘
        ▼
 Candidate Recommendation
+
+The screening system compares the candidate's skills with the skills required for the selected job and generates a match score based on skill overlap.
+
+📊 Screening Results
+Match Score	Recommendation
+80%+	🟢 Strong Match
+60–79%	🔵 Good Match
+40–59%	🟡 Needs Review
+Below 40%	🔴 Low Match
+
+This allows recruiters to quickly identify candidates who are more closely aligned with the requirements of a job.
+
+🔄 Recruitment Pipeline
+
+HireNest provides a structured candidate journey:
+
+Applied
+   ↓
+AI Screened
+   ↓
+Shortlisted
+   ↓
+Interview
+   ↓
+Selected
+
+Candidates can also be moved to:
+
+Rejected
+
+This gives recruiters a clear view of where every candidate currently stands in the hiring process.
+
+🧩 Platform Modules
+🔐 Authentication
+Recruiter & Candidate registration
+Login system
+JWT authentication
+Password hashing using bcrypt
+Role-based application workflow
+💼 Job Management
+Create jobs
+View jobs
+View detailed job information
+Job-specific skill requirements
+👥 Candidate Management
+Add candidates
+Candidate profiles
+Candidate skill management
+Recruitment status tracking
+📋 Application Management
+Apply for jobs
+Duplicate application prevention
+Application tracking
+Application status updates
+Candidate application history
+🤖 AI Screening
+Candidate vs. job skill matching
+Match percentage
+Matched skills
+Missing skills
+Candidate recommendation
+📊 Dashboards
+Recruiter dashboard
+Candidate dashboard
+Recruitment statistics
+Application statistics
+Hiring pipeline visibility
+🏗️ System Architecture
+                    ┌──────────────────────┐
+                    │       HireNest       │
+                    │    React Frontend    │
+                    └──────────┬───────────┘
+                               │
+                               │ REST API
+                               ▼
+                    ┌──────────────────────┐
+                    │   Node.js + Express  │
+                    │       Backend        │
+                    └──────────┬───────────┘
+                               │
+          ┌────────────────────┼────────────────────┐
+          │                    │                    │
+          ▼                    ▼                    ▼
+   Authentication       Job Management      Candidate &
+                                             Application
+                                             Management
+          │                    │                    │
+          └────────────────────┼────────────────────┘
+                               │
+                               ▼
+                    ┌──────────────────────┐
+                    │     MongoDB Atlas     │
+                    └──────────────────────┘
+🛠️ Tech Stack
+Frontend
+⚛️ React.js
+⚡ Vite
+🧭 React Router
+📜 JavaScript
+🎨 CSS3
+Backend
+🟢 Node.js
+🚂 Express.js
+🔗 REST APIs
+🔐 JWT Authentication
+🔒 bcrypt
+🌐 CORS
+Database
+🍃 MongoDB
+☁️ MongoDB Atlas
+🦫 Mongoose
+AI / Screening
+🤖 AI-assisted candidate screening
+🎯 Skill matching
+📊 Candidate scoring
+🧠 Candidate recommendations
+Deployment
+▲ Vercel — Frontend
+🚀 Render — Backend
+☁️ MongoDB Atlas — Database
+🔌 REST API
+Authentication
+POST /api/auth/signup
+POST /api/auth/login
+Jobs
+GET  /api/jobs
+POST /api/jobs
+GET  /api/jobs/:id
+Candidates
+POST  /api/candidates
+GET   /api/candidates/job/:jobId
+GET   /api/candidates/:id
+PATCH /api/candidates/:id/status
+AI Screening
+POST /api/candidates/:id/ai-screen
+Applications
+POST  /api/applications
+GET   /api/applications/candidate/:candidateId
+GET   /api/applications/recruiter/:recruiterId
+GET   /api/applications/:id
+PATCH /api/applications/:id/status
+🔒 Security
+
+HireNest follows standard backend security practices including:
+
+JWT-based authentication
+Password hashing using bcrypt
+Role-based application workflows
+Environment variables for sensitive configuration
+MongoDB Atlas database security
+Sensitive credentials excluded from the repository
+📁 Project Structure
+HireNest/
+│
+├── backend/
+│   ├── server.js
+│   ├── package.json
+│   └── .gitignore
+│
+├── frontend/
+│   ├── src/
+│   │   ├── pages/
+│   │   │   ├── Login.jsx
+│   │   │   ├── Signup.jsx
+│   │   │   ├── RecruiterDashboard.jsx
+│   │   │   ├── CandidateDashboard.jsx
+│   │   │   ├── CreateJob.jsx
+│   │   │   ├── Jobs.jsx
+│   │   │   ├── JobDetails.jsx
+│   │   │   ├── Candidate.jsx
+│   │   │   ├── CandidateDetails.jsx
+│   │   │   ├── AddCandidate.jsx
+│   │   │   └── CandidateApplications.jsx
+│   │   │
+│   │   ├── App.jsx
+│   │   ├── App.css
+│   │   └── main.jsx
+│   │
+│   ├── package.json
+│   └── vite.config.js
+│
+└── README.md
+⚙️ Getting Started
+1. Clone the Repository
+git clone https://github.com/mohini-2004/HireNest-.git
+cd HireNest-
+2. Backend Setup
+cd backend
+npm install
+
+Create a .env file:
+
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+PORT=5000
+
+Start the backend:
+
+node server.js
+
+The backend will run on:
+
+http://localhost:5000
+3. Frontend Setup
+
+Open a new terminal:
+
+cd frontend
+npm install
+npm run dev
+
+Vite will provide the local development URL in the terminal.
+
+🚀 Future Enhancements
+
+HireNest can be further extended with:
+
+📄 Resume PDF upload & parsing
+🧠 Advanced AI resume analysis
+💬 AI-generated interview questions
+✍️ AI-generated cover letters
+📅 Interview scheduling
+📧 Email notifications
+📈 Advanced recruiter analytics
+🎯 Intelligent job recommendations
+🔍 Semantic resume-to-job matching
+👑 Admin dashboard
+📊 Advanced hiring analytics
+🔔 Real-time recruitment notifications
+🎯 Project Objective
+
+The goal of HireNest is to make recruitment:
+
+Faster. Smarter. More organized.
+
+Instead of managing jobs, candidates, applications, and screening through disconnected systems, HireNest provides a centralized platform where recruiters can manage the complete hiring workflow.
+
+At the same time, candidates get a simple experience to discover opportunities, apply for jobs, and track their recruitment journey.
+
+In short:
+HireNest
+   │
+   ├── Recruitment Management
+   ├── Candidate Management
+   ├── Application Tracking
+   ├── Recruitment Pipeline
+   └── AI-Assisted Screening
+⭐ Project Highlights
+✅ Full-Stack Web Application
+✅ React + Node.js + Express
+✅ MongoDB Atlas Integration
+✅ REST API Architecture
+✅ JWT Authentication
+✅ Password Hashing with bcrypt
+✅ Recruiter & Candidate Roles
+✅ Job Management
+✅ Candidate Management
+✅ Application Tracking
+✅ Recruitment Pipeline
+✅ AI-Assisted Candidate Screening
+✅ Match Score & Skill Analysis
+✅ Responsive Modern UI
+✅ Live Frontend Deployment
+✅ Live Backend Deployment
+👩‍💻 Author
+Mohini Gupta
+
+B.Tech — Computer Science & Engineering
+
+🔗 GitHub:
+https://github.com/mohini-2004
