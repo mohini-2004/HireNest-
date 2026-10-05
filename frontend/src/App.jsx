@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 import Login from "./pages/Login";
@@ -17,122 +18,189 @@ import CandidateDetails from "./pages/CandidateDetails";
 import "./App.css";
 
 function Home() {
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem("hirenest-theme") === "dark";
+  });
+
+  useEffect(() => {
+    document.body.className = darkMode ? "dark-theme" : "light-theme";
+    localStorage.setItem("hirenest-theme", darkMode ? "dark" : "light");
+  }, [darkMode]);
+
   return (
     <div className="home-page">
       {/* Navbar */}
       <nav className="navbar">
-        <div className="logo">
+        <Link to="/" className="logo">
           <div className="logo-icon">H</div>
           <span>HireNest</span>
-        </div>
+        </Link>
 
         <div className="nav-links">
           <Link to="/">Home</Link>
           <Link to="/login">Login</Link>
-          <Link to="/signup">Sign Up</Link>
+          <Link to="/signup" className="nav-signup">
+            Sign Up
+          </Link>
+
+          <button
+            className="theme-toggle"
+            onClick={() => setDarkMode(!darkMode)}
+            aria-label="Toggle theme"
+          >
+            {darkMode ? "☀️" : "🌙"}
+          </button>
         </div>
       </nav>
 
-      {/* Hero */}
+      {/* Hero Section */}
       <main className="hero-section">
         <div className="hero-content">
           <div className="hero-badge">
-            ✨ AI-Powered Recruitment Platform
+            <span>✦</span> AI-Powered Recruitment Platform
           </div>
 
           <h1>
-            Find talent.
+            Find the right talent.
             <br />
             <span>Hire smarter.</span>
           </h1>
 
           <p>
-            HireNest helps recruiters discover, evaluate, and hire the
-            right candidates faster with AI-powered screening and
-            intelligent interview generation.
+            HireNest helps recruiters discover, evaluate, and hire the right
+            candidates faster with AI-assisted screening and smart candidate
+            matching.
           </p>
 
           <div className="hero-buttons">
             <Link to="/signup" className="primary-btn">
-              Get Started →
+              Get Started <span>→</span>
             </Link>
 
             <Link to="/login" className="secondary-btn">
               Recruiter Login
             </Link>
           </div>
+
+          <div className="hero-trust">
+            <span>✓ Easy candidate management</span>
+            <span>✓ AI-assisted screening</span>
+          </div>
         </div>
 
-        {/* Recruitment Overview */}
-        <div className="hero-card">
-          <div className="hero-card-header">
+        {/* Dashboard Preview */}
+        <div className="dashboard-preview">
+          <div className="preview-top">
             <div>
-              <span>Recruitment Overview</span>
+              <span className="preview-label">Recruitment Overview</span>
               <h3>Candidate Pipeline</h3>
             </div>
 
-            <div className="hero-card-icon">📊</div>
+            <div className="preview-icon">📊</div>
           </div>
 
-          <div className="pipeline">
-            <div className="pipeline-item">
+          <div className="pipeline-grid">
+            <div className="pipeline-card">
               <span>Applications</span>
               <strong>124</strong>
+              <small>+12% this month</small>
             </div>
 
-            <div className="pipeline-item">
+            <div className="pipeline-card">
               <span>AI Screened</span>
               <strong>86</strong>
+              <small>69% screened</small>
             </div>
 
-            <div className="pipeline-item">
+            <div className="pipeline-card">
               <span>Shortlisted</span>
               <strong>32</strong>
+              <small>37% selected</small>
             </div>
 
-            <div className="pipeline-item">
+            <div className="pipeline-card">
               <span>Interviews</span>
               <strong>14</strong>
+              <small>Upcoming</small>
             </div>
+          </div>
+
+          <div className="ai-preview">
+            <div className="ai-preview-icon">✦</div>
+
+            <div>
+              <span>AI Screening</span>
+              <p>Candidate matching is ready</p>
+            </div>
+
+            <div className="match-score">92%</div>
           </div>
         </div>
       </main>
 
       {/* Features */}
       <section className="features-section">
-        <div className="feature-card">
-          <div className="feature-icon">🤖</div>
-
-          <h3>AI Screening</h3>
-
+        <div className="section-heading">
+          <span>POWERFUL RECRUITMENT TOOLS</span>
+          <h2>Everything you need to hire better</h2>
           <p>
-            Analyze candidate profiles against job requirements and
-            identify the strongest matches.
+            Manage your complete recruitment workflow from one platform.
           </p>
         </div>
 
-        <div className="feature-card">
-          <div className="feature-icon">🎯</div>
+        <div className="features-grid">
+          <div className="feature-card">
+            <div className="feature-icon">🤖</div>
 
-          <h3>Smart Matching</h3>
+            <h3>AI Screening</h3>
 
-          <p>
-            Quickly understand matched skills, missing skills, and
-            candidate suitability.
-          </p>
-        </div>
+            <p>
+              Compare candidate skills with job requirements and quickly
+              identify strong matches.
+            </p>
+          </div>
 
-        <div className="feature-card">
-          <div className="feature-icon">💬</div>
+          <div className="feature-card">
+            <div className="feature-icon">🎯</div>
 
-          <h3>AI Interviews</h3>
+            <h3>Smart Matching</h3>
 
-          <p>
-            Generate role-specific technical and project interview
-            questions for candidates.
-          </p>
+            <p>
+              Understand matched skills, missing skills, and overall
+              candidate suitability.
+            </p>
+          </div>
+
+          <div className="feature-card">
+            <div className="feature-icon">📋</div>
+
+            <h3>Candidate Management</h3>
+
+            <p>
+              Track candidates through every stage of the recruitment
+              pipeline.
+            </p>
+          </div>
         </div>
       </section>
+
+      {/* Bottom CTA */}
+      <section className="bottom-cta">
+        <h2>Ready to hire smarter?</h2>
+
+        <p>
+          Start managing your recruitment process with HireNest.
+        </p>
+
+        <Link to="/signup" className="primary-btn">
+          Get Started →
+        </Link>
+      </section>
+
+      <footer className="footer">
+        <strong>HireNest</strong>
+        <span>AI-Powered Recruitment Platform</span>
+      </footer>
     </div>
   );
 }
@@ -141,40 +209,26 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-
-        {/* ================= HOME ================= */}
+        {/* HOME */}
         <Route path="/" element={<Home />} />
 
-        {/* ================= AUTHENTICATION ================= */}
+        {/* AUTHENTICATION */}
         <Route path="/login" element={<Login />} />
-
         <Route path="/signup" element={<Signup />} />
 
-        {/* ================= RECRUITER ================= */}
+        {/* RECRUITER */}
         <Route
           path="/recruiter-dashboard"
           element={<RecruiterDashboard />}
         />
 
-        <Route
-          path="/create-job"
-          element={<CreateJob />}
-        />
+        <Route path="/create-job" element={<CreateJob />} />
 
-        <Route
-          path="/jobs"
-          element={<Jobs />}
-        />
+        <Route path="/jobs" element={<Jobs />} />
 
-        <Route
-          path="/jobs/:id"
-          element={<JobDetails />}
-        />
+        <Route path="/jobs/:id" element={<JobDetails />} />
 
-        <Route
-          path="/candidates"
-          element={<Candidate />}
-        />
+        <Route path="/candidates" element={<Candidate />} />
 
         <Route
           path="/candidates/:id"
@@ -186,7 +240,7 @@ function App() {
           element={<AddCandidate />}
         />
 
-        {/* ================= CANDIDATE ================= */}
+        {/* CANDIDATE */}
         <Route
           path="/candidate-dashboard"
           element={<CandidateDashboard />}
@@ -196,7 +250,6 @@ function App() {
           path="/candidate-applications"
           element={<CandidateApplications />}
         />
-
       </Routes>
     </BrowserRouter>
   );
