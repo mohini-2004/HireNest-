@@ -1,344 +1,127 @@
 # 🚀 HireNest
 
-### AI-Powered Recruitment & Candidate Management Platform
+### AI-Assisted Recruitment & Candidate Management Platform
 
-> Hire smarter. Screen faster. Build better teams.
+> **Hire smarter. Screen faster. Build better teams.**
 
-HireNest is a full-stack recruitment platform designed to simplify the hiring journey for both recruiters and candidates.
+HireNest is a full-stack recruitment platform designed to bring the complete hiring workflow into one modern application.
 
-The platform brings **job management, candidate screening, application tracking, recruitment pipelines, and AI-assisted candidate evaluation** together in one modern web application.
-
----
-
-## Live Demo
-
-**Frontend:**  
-https://hire-nest-ivory.vercel.app
-
-**Backend:**  
-https://hirenest-backend-ihvo.onrender.com
-
-**GitHub:**  
-https://github.com/mohini-2004/HireNest-
+From **creating job openings and managing candidates** to **tracking applications and AI-assisted candidate screening**, HireNest helps recruiters organize the hiring process while giving candidates a simple way to discover jobs and track their applications.
 
 ---
 
-## ✨ What HireNest Does
+## 🌐 Live Demo
 
-HireNest provides two dedicated experiences:
+| Platform | Link |
+|---|---|
+| 🌐 **Frontend** | https://hire-nest-ivory.vercel.app |
+| ⚙️ **Backend API** | https://hirenest-backend-ihvo.onrender.com |
+| 💻 **GitHub** | https://github.com/mohini-2004/HireNest- |
 
-### 👨‍💼 For Recruiters
+---
 
-Recruiters can:
+# 💡 Why HireNest?
 
-- Create and manage job openings
+Traditional recruitment workflows often involve multiple disconnected tools for:
+
+- Job postings
+- Candidate management
+- Application tracking
+- Screening
+- Interview stages
+- Hiring decisions
+
+**HireNest brings these workflows together in a single platform.**
+
+The platform provides dedicated experiences for both **Recruiters** and **Candidates**, creating a structured hiring journey from application to final selection.
+
+---
+
+# ✨ Key Features
+
+## 👨‍💼 Recruiter Experience
+
+Recruiters can manage the hiring workflow from a centralized dashboard.
+
+### 💼 Job Management
+- Create job openings
+- Define required skills
+- View available jobs
+- View detailed job information
+- Manage job-specific candidates
+
+### 👥 Candidate Management
 - Add candidates to specific jobs
-- View detailed candidate profiles
-- Manage the recruitment pipeline
-- Track candidate applications
-- Update application status
-- Perform AI-assisted candidate screening
+- View candidate profiles
+- Manage candidate skills
+- Track recruitment status
+- Review candidate information
+
+### 🤖 AI-Assisted Screening
 - Compare candidate skills with job requirements
-- View AI match scores
-- Identify matched and missing skills
-- Get candidate recommendations
+- Calculate candidate match percentage
+- Identify matched skills
+- Identify missing skills
+- Generate candidate recommendations
+- Move candidates through the recruitment pipeline
 
-### 👩‍💻 For Candidates
-
-Candidates can:
-
-- Create an account and log in
-- Browse available jobs
-- View detailed job descriptions
-- Apply for suitable positions
-- Track submitted applications
-- Monitor application status
-- Follow their recruitment progress
-- View shortlisted and interview stages
+### 📊 Recruitment Dashboard
+- View recruitment statistics
+- Track candidate pipeline
+- Monitor application activity
+- Get an overview of hiring progress
 
 ---
 
-# 🤖 AI-Powered Candidate Screening
+# 👩‍💻 Candidate Experience
 
-One of the core features of HireNest is its AI-assisted candidate screening system.
+Candidates get their own dedicated recruitment workflow.
 
-Recruiters can screen a candidate against the skills required for a particular job.
+### 🔐 Account Management
+- Candidate registration
+- Secure login
+- Role-based application flow
 
-The system analyzes:
+### 🔎 Job Discovery
+- Browse available jobs
+- View complete job descriptions
+- Review required skills
+- Explore suitable opportunities
+
+### 📩 Applications
+- Apply for jobs
+- Prevent duplicate applications
+- View submitted applications
+- Track application status
+- Monitor recruitment progress
+
+---
+
+# 🤖 AI-Assisted Candidate Screening
+
+One of HireNest's core features is its **AI-assisted candidate screening system**.
+
+Instead of manually comparing every candidate with a job description, recruiters can screen candidates based on their skills.
+
+### Screening Workflow
 
 ```text
 Candidate Skills
-       +
+       │
+       ▼
 Job Requirements
-       ↓
-Skill Matching
-       ↓
-Match Score
-       ↓
-Matched Skills
-       +
-Missing Skills
-       ↓
+       │
+       ▼
+   Skill Matching
+       │
+       ▼
+    Match Score
+       │
+   ┌───┴────┐
+   ▼        ▼
+Matched   Missing
+Skills     Skills
+   │        │
+   └───┬────┘
+       ▼
 Candidate Recommendation
-
-
-📊 Screening Results
-
-The system can provide recommendations such as:
-
-Match Score	Recommendation
-80%+	🟢 Strong Match
-60–79%	🔵 Good Match
-40–59%	🟡 Needs Review
-Below 40%	🔴 Low Match
-
-This helps recruiters quickly identify candidates who are more closely aligned with a job's requirements.
-
-🔄 Recruitment Pipeline
-
-HireNest supports a structured candidate journey:
-
-Applied
-   ↓
-AI Screened
-   ↓
-Shortlisted
-   ↓
-Interview
-   ↓
-Selected
-
-Candidates can also be moved to:
-
-Rejected
-
-This provides recruiters with a clear view of the hiring pipeline.
-
-🧩 Core Features
-🔐 Authentication
-Recruiter & Candidate registration
-Login system
-JWT authentication
-Password hashing with bcrypt
-Role-based application flow
-💼 Job Management
-Create jobs
-View jobs
-View detailed job information
-Skill-based job requirements
-👥 Candidate Management
-Add candidates
-Candidate profiles
-Candidate skill management
-Recruitment status tracking
-📋 Application Management
-Apply for jobs
-Prevent duplicate applications
-Track applications
-Application status updates
-Candidate application history
-🤖 AI Screening
-Candidate vs Job skill matching
-Match percentage
-Matched skills
-Missing skills
-Candidate recommendation
-📊 Dashboards
-Recruiter dashboard
-Candidate dashboard
-Recruitment statistics
-Application statistics
-Hiring pipeline visibility
-🛠️ Tech Stack
-Frontend
-⚛️ React.js
-⚡ Vite
-🧭 React Router
-🎨 CSS3
-📜 JavaScript
-Backend
-🟢 Node.js
-🚂 Express.js
-🔗 REST APIs
-🔐 JWT
-🔒 bcrypt
-🌐 CORS
-Database
-🍃 MongoDB
-☁️ MongoDB Atlas
-🦫 Mongoose
-AI
-🤖 AI-assisted candidate screening
-🎯 Skill matching
-📊 Candidate scoring
-🧠 Candidate recommendation
-Deployment
-▲ Vercel — Frontend
-🚀 Render — Backend
-☁️ MongoDB Atlas — Database
-🏗️ Architecture
-                    ┌─────────────────────┐
-                    │      HireNest       │
-                    │   React Frontend    │
-                    └──────────┬──────────┘
-                               │
-                               │ REST API
-                               ▼
-                    ┌─────────────────────┐
-                    │    Node.js +        │
-                    │     Express.js      │
-                    └──────────┬──────────┘
-                               │
-              ┌────────────────┼────────────────┐
-              │                │                │
-              ▼                ▼                ▼
-        Authentication     Job Management   AI Screening
-              │                │                │
-              └────────────────┼────────────────┘
-                               ▼
-                    ┌─────────────────────┐
-                    │    MongoDB Atlas    │
-                    └─────────────────────┘
-📁 Project Structure
-HireNest/
-│
-├── backend/
-│   ├── server.js
-│   ├── package.json
-│   └── .gitignore
-│
-├── frontend/
-│   ├── src/
-│   │   ├── pages/
-│   │   │   ├── Login.jsx
-│   │   │   ├── Signup.jsx
-│   │   │   ├── RecruiterDashboard.jsx
-│   │   │   ├── CandidateDashboard.jsx
-│   │   │   ├── CreateJob.jsx
-│   │   │   ├── Jobs.jsx
-│   │   │   ├── JobDetails.jsx
-│   │   │   ├── Candidate.jsx
-│   │   │   ├── CandidateDetails.jsx
-│   │   │   ├── AddCandidate.jsx
-│   │   │   └── CandidateApplications.jsx
-│   │   │
-│   │   ├── App.jsx
-│   │   ├── App.css
-│   │   └── main.jsx
-│   │
-│   ├── package.json
-│   └── vite.config.js
-│
-└── README.md
-⚙️ Getting Started
-1. Clone the Repository
-git clone https://github.com/mohini-2004/HireNest-.git
-cd HireNest-
-2. Backend Setup
-cd backend
-npm install
-
-Create a .env file:
-
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-PORT=5000
-
-Start the backend:
-
-node server.js
-
-The backend will run on:
-
-http://localhost:5000
-3. Frontend Setup
-
-Open a new terminal:
-
-cd frontend
-npm install
-npm run dev
-
-Vite will provide the local development URL in the terminal.
-
-🔌 API Endpoints
-Authentication
-POST /api/auth/signup
-POST /api/auth/login
-Jobs
-GET  /api/jobs
-POST /api/jobs
-GET  /api/jobs/:id
-Candidates
-POST  /api/candidates
-GET   /api/candidates/job/:jobId
-GET   /api/candidates/:id
-PATCH /api/candidates/:id/status
-AI Screening
-POST /api/candidates/:id/ai-screen
-Applications
-POST  /api/applications
-GET   /api/applications/candidate/:candidateId
-GET   /api/applications/recruiter/:recruiterId
-GET   /api/applications/:id
-PATCH /api/applications/:id/status
-🔒 Security
-
-HireNest follows standard backend security practices including:
-
-JWT-based authentication
-Password hashing using bcrypt
-Environment variables for sensitive configuration
-MongoDB Atlas database security
-Role-based application workflows
-
-Sensitive credentials and environment variables are intentionally excluded from the repository.
-
-🚀 Future Enhancements
-
-The platform can be further extended with:
-
-📄 Resume PDF upload & parsing
-🧠 Advanced AI resume analysis
-💬 AI-generated interview questions
-✍️ AI-generated cover letters
-📅 Interview scheduling
-📧 Email notifications
-📈 Advanced recruiter analytics
-🎯 Intelligent job recommendations
-🔍 Semantic resume-to-job matching
-👑 Admin dashboard
-📊 Hiring analytics & reports
-🎯 Project Objective
-
-The goal of HireNest is to make recruitment faster, more organized, and more data-driven.
-
-Instead of managing jobs, candidates, applications, and screening through disconnected systems, HireNest provides a centralized platform where recruiters can manage the complete hiring workflow while candidates can easily discover opportunities and track their applications.
-
-In short:
-
-HireNest = Recruitment Management + Candidate Tracking + AI-Assisted Screening
-
-👩‍💻 Author
-Mohini Gupta
-
-B.Tech — Computer Science & Engineering
-
-GitHub:
-https://github.com/mohini-2004
-
-⭐ Project Highlights
-✓ Full-Stack Web Application
-✓ React + Node.js + Express
-✓ MongoDB Atlas Integration
-✓ JWT Authentication
-✓ Recruiter & Candidate Roles
-✓ Job Management
-✓ Candidate Management
-✓ Application Tracking
-✓ Recruitment Pipeline
-✓ AI-Assisted Candidate Screening
-✓ Live Deployment
-✓ REST API Architecture
-
-
